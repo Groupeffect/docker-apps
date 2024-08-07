@@ -1,0 +1,35 @@
+services:
+  open_webui:
+    # network_mode: "host"
+    image: ghcr.io/open-webui/open-webui:main
+    volumes:
+      - './open-webui-data:/app/backend/data'
+    env_file:
+      - .env
+    environment:
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL}
+      ENABLE_OLLAMA_API: 'true'
+      WEBUI_AUTH: 'false'
+    ports:
+      - '3000:8080'
+    networks:
+      - host
+    
+  open_webui_pipelines:
+    image: ghcr.io/open-webui/pipelines:main
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"
+    restart: always
+    volumes:
+      - './open-webui-pipeline-data:/app/pipelines'
+    ports:
+      - '9099:9099'
+    depends_on:
+      - open_webui
+    networks:
+      - host
+
+networks:
+  host:
+    name: host
+    # external: true

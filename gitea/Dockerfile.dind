@@ -1,0 +1,2 @@
+FROM docker.io/docker:dind
+WORKDIR /app

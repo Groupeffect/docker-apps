@@ -128,3 +128,13 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+open-webui-data
+open-webui-pipeline-data
+librechat-data
+postgres-data
+gitea-data
+runner-dind-data
+runner-act-data
+
+db.sqlite3
