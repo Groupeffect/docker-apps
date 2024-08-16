@@ -1,0 +1,14 @@
+
+GITEA_INSTANCE_URL=http://192.168.178.24:3000
+GITEA__database__DB_TYPE=postgres
+GITEA__database__HOST=gitea_db:5432
+GITEA__database__NAME=gitea
+GITEA__database__USER=gitea
+GITEA__database__PASSWD=gitea
+GITEA_RUNNER_REGISTRATION_TOKEN=j18TwcTSbhswGlnQp8zB6ktnRn6sLbgcNw4D5zuf
+POSTGRES_USER=gitea
+POSTGRES_PASSWORD=gitea
+POSTGRES_DB=gitea
+# USER_UID=1000
+# USER_GID=1000
+

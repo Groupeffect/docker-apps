@@ -37,9 +37,7 @@ services:
     restart: always
     env_file:
       - .env
-    environment:
-      - GITEA_INSTANCE_URL=${GITEA_INSTANCE_URL}
-      - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
+      # - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
       # - GITEA_INSTANCE_URL=http://gitea_server:3000
     networks:
       - gitea
@@ -47,7 +45,7 @@ services:
       - gitea_server
     volumes:
       - ./runner-act-data/act_runner:/data
-      # - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
     
     
   # gitea_runner_dind:
