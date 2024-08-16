@@ -23,7 +23,7 @@ services:
       COLLECTIONS: "crowdsecurity/nginx"
       GID: "${GID-1000}"
     ports:
-      - '127.0.0.1:8888:8080' ## We expose the LAPI 8080 via loopback for bouncers to connect
+      - '127.0.0.1:8881:8080' ## We expose the LAPI 8080 via loopback for bouncers to connect
     ## Change to '8080:8080' if you want to expose the LAPI to external hosts, HOWEVER, do so at your own risk.
     # volumes:
     #   - ./crowdsec/acquis.yaml:/etc/crowdsec/acquis.yaml
