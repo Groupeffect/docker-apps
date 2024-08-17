@@ -36,3 +36,8 @@ cmd_podman_crowdsec_dashboard(){
     sudo systemctl enable --now podman.socket
     sudo env DOCKER_HOST=unix:///run/podman/podman.sock cscli dashboard setup
 }
+
+# The default username is crowdsec@crowdsec.net and 
+# the default password is !!Cr0wdS3c_M3t4b4s3??.
+# Please update the password when you will connect to metabase for the first time
+
