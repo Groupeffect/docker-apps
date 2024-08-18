@@ -17,7 +17,7 @@ HOST_MACHINE_IP=$(hostname -I | cut -d ' ' -f 1)
 }
 
 cmd_crowdsec_dashboard_setup(){
-    cscli dashboard setup --password 1212tree
+    cscli dashboard setup --password 8098809hhjbjh
 }
 
 cmd_crowdsec_groups(){
