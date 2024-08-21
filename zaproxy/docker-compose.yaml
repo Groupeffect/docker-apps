@@ -9,4 +9,4 @@ services:
       - 8888:80
     volumes:
       - './zap-data:/zap/wrk:rw'
-    command: zap-baseline.py -t http://192.168.178.23 -r baseline-report
+    command: zap-baseline.py -t http://192.168.178.XXX -r baseline-report
