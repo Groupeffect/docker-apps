@@ -139,5 +139,6 @@ runner-act-data
 
 pihole-etc-data
 pihole-etc-dnsmasq.d-data
+zap-data
 
 db.sqlite3

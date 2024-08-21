@@ -1,0 +1,12 @@
+services:
+  zaproxy_local:
+    user: root
+    build: 
+      context: '.'
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8888:80
+    volumes:
+      - './zap-data:/zap/wrk:rw'
+    command: zap-baseline.py -t http://192.168.178.23 -r baseline-report
