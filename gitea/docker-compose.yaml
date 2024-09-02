@@ -1,8 +1,8 @@
 version: "3"
 
-networks:
-  gitea:
-    external: false
+# networks:
+#   gitea:
+#     external: false
 
 services:
   gitea_server:
@@ -10,8 +10,6 @@ services:
     env_file:
       - .env
     restart: always
-    networks:
-      - gitea
     volumes:
       - ./gitea-data:/data
     ports:
@@ -19,33 +17,37 @@ services:
       - "2222:22"
     depends_on:
       - gitea_db
+    # networks:
+    #   - gitea
 
   gitea_db:
+
     image: docker.io/pgvector/pgvector:pg16
     restart: always
     env_file:
       - .env
-    networks:
-      - gitea
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    # networks:
+    #   - gitea
 
   gitea_runner_act:
+
     image: docker.io/gitea/act_runner:latest
     restart: always
     env_file:
       - .env
       # - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
       # - GITEA_INSTANCE_URL=http://gitea_server:3000
-    networks:
-      - gitea
     depends_on:
       - gitea_server
     volumes:
       - ./runner-act-data/act_runner:/data
       - /var/run/docker.sock:/var/run/docker.sock
+    # networks:
+    #   - gitea
     
     
   # gitea_runner_dind:

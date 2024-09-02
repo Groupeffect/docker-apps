@@ -12,7 +12,7 @@ cmd_install_crowdsec(){
 cmd_create_env_file(){
     cp .env .env-backup
     echo "
-HOST_MACHINE_IP=$(hostname -I | cut -d ' ' -f 1)   
+HOST_MACHINE_IP=$(hostname -i)   
 " > .env
 }
 

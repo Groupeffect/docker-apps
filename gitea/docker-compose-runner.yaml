@@ -10,7 +10,7 @@ services:
       # - /var/run/docker.sock:/var/run/docker.sock
     env_file:
       - .env
-    environment:
-      - GITEA_INSTANCE_URL=${GITEA_INSTANCE_URL}
+    # environment:
+    #   - GITEA_INSTANCE_URL=${GITEA_INSTANCE_URL}
       # - GITEA_INSTANCE_URL=http://gitea_server:3000
-      - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
+      # - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
