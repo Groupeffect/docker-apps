@@ -1,16 +1,15 @@
 version: "3"
 
 services:
-  gitea_runner_act:
+ gitea_runner_act:
+
     image: docker.io/gitea/act_runner:latest
     restart: always
-    network_mode: host
-    volumes:
-      - ./runner-act-data/act_runner:/data
-      # - /var/run/docker.sock:/var/run/docker.sock
     env_file:
       - .env
-    # environment:
-    #   - GITEA_INSTANCE_URL=${GITEA_INSTANCE_URL}
-      # - GITEA_INSTANCE_URL=http://gitea_server:3000
       # - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
+      # - GITEA_INSTANCE_URL=http://gitea_server:3000
+    volumes:
+      - ./runner-act-data/act_runner:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    # networks:

@@ -136,6 +136,8 @@ postgres-data
 gitea-data
 runner-dind-data
 runner-act-data
+grafana-data
+docker-registry-data
 
 pihole-etc-data
 pihole-etc-dnsmasq.d-data
