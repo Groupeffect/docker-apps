@@ -17,3 +17,4 @@ POSTGRES_DB=gitea
 # USER_GID=1000
 " > .env && cat env
 }
+
