@@ -1,0 +1,13 @@
+services:
+
+  youtrack:
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - "./youtrack-data:/opt/youtrack/data"
+      - "./youtrack-conf:/opt/youtrack/conf"
+      - "./youtrack-logs:/opt/youtrack/logs"
+      - "./youtrack-backups:/opt/youtrack/backups"

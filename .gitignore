@@ -144,3 +144,10 @@ pihole-etc-dnsmasq.d-data
 zap-data
 
 db.sqlite3
+
+youtrack-data
+youtrack-conf
+youtrack-logs
+youtrack-backups
+
+private-notes.md
